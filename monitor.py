@@ -29,9 +29,8 @@ def scan():
     command = f'{DIR_PATH}/scan.sh'
     p = subprocess.Popen(['sudo',command])
     p.wait()
-    if os.stat(f"{DIR_PATH}/unknown-hosts").st_size == 0:
-        return False
-    return True
+    noThreats = os.stat(f"{DIR_PATH}/unknown-hosts").st_size == 0
+    return False if noThreats else True
 
 if __name__ == '__main__':
     if scan():
