@@ -35,4 +35,4 @@ def scan():
 
 if __name__ == '__main__':
     if scan():
-    	notify_user()
+        notify_user()

@@ -1,8 +1,9 @@
 # Custom
 .DS_Store
+known-hosts
 detected-hosts
 unknown-hosts
-unknown-hosts.log
+unknown-hosts-scan
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
