@@ -1,5 +1,5 @@
 # Network Monitor
-Python script to monitor your network for unknown hosts. An email alert will be sent to the specified user when an unknown host is detected on the network. 
+Python script to monitor your network for unknown hosts. An email alert will be sent to the specified user when an unknown host is detected on the network with information about the unknown device.
 
 ## Utilizes
 * Cron
@@ -36,6 +36,15 @@ git clone https://github.com/itzliu/network-monitor.git
 Change directory into the project directory folder.
 ```
 cd network-monitor
+```
+Create a file for known devices on your network. You can use the arp command to see the devices currently on your network.
+```
+sudo nano known-hosts
+```
+```
+[device address 1]
+[device address 2]
+[device address 3...]
 ```
 Create a virtual environment for the app.
 ```
