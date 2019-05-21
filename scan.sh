@@ -11,4 +11,9 @@ if  [ -s $HOME/network-monitor/unknown-hosts ]
 then
 	nmap -O -iL $HOME/network-monitor/unknown-hosts > $HOME/network-monitor/unknown-hosts-scan
 	cat $HOME/network-monitor/unknown-hosts-scan >> $HOME/logs/unknown-hosts.log
+else
+	timestamp() {
+		date +"%D %T           NO UNKNOWN HOSTS DETECTED"
+	}
+	timestamp >> $HOME/logs/unknown-hosts.log
 fi
