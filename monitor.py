@@ -6,7 +6,6 @@ DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 NETWORK_NAME = 'HOME ROUTER'
 EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
 EMAIL_PASSWORD = os.environ.get('GOOGLE_APP_PASS')
-EMAIL_DEFAULT_SENDER = os.environ.get('EMAIL_DEFAULT_SENDER')
 
 def notify_user():
 
