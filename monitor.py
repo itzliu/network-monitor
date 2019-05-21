@@ -26,7 +26,7 @@ def notify_user():
 
 def scan():
     command = f'{DIR_PATH}/scan.sh'
-    p = subprocess.Popen(['sudo', command])
+    p = subprocess.Popen(['sudo', '-E', 'sh', '-c', command])
     p.wait()
     noThreats = os.stat(f"{DIR_PATH}/unknown-hosts").st_size == 0
     return False if noThreats else True
