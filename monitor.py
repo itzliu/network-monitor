@@ -3,7 +3,7 @@ import subprocess
 import smtplib
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
-NETWORK_NAME = 'HOME ROUTER'
+NETWORK_NAME = os.environ.get('NETWORK_NAME')
 EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
 EMAIL_PASSWORD = os.environ.get('GOOGLE_APP_PASS')
 
