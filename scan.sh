@@ -10,10 +10,10 @@ grep -Fxv -f $HOME/network-monitor/known-hosts $HOME/network-monitor/detected-ho
 if  [ -s $HOME/network-monitor/unknown-hosts ]
 then
 	sudo nmap -O -iL $HOME/network-monitor/unknown-hosts > $HOME/network-monitor/unknown-hosts-scan
-	cat $HOME/network-monitor/unknown-hosts-scan >> $HOME/logs/unknown-hosts.log
+	cat $HOME/network-monitor/unknown-hosts-scan >> $HOME/logs/network-monitor.log
 else
 	timestamp() {
 		date +"%D %T           NO UNKNOWN HOSTS DETECTED"
 	}
-	timestamp >> $HOME/logs/unknown-hosts.log
+	timestamp >> $HOME/logs/network-monitor.log
 fi
